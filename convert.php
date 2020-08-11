@@ -14,6 +14,4 @@ print("   author : RahmatK    \n");
 print("                       \n");
 print("###################### \n\n");
 include 'algo_r.php';
-print("\033[1;31m [!] PROGRAM CLOSED \033[1;37m \n\n");
-print("###################### \n");
-print("\n\n");
+
