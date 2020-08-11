@@ -20,5 +20,4 @@ $ php convert.php
 ## Akhir
 Terimakasih telah menggunakan software ini,
 tapi tetap jangan malas belajar</br></br>
-اَسْتَغْفِرُاللهَ الْعَظِيْمَ
 
