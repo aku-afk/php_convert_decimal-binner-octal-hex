@@ -18,5 +18,5 @@ $ php convert.php
 
 ```
 ## Akhir
-Terimakasih telah menggunakan
-Tapi tetap jangan malas belajar
+Terimakasih telah menggunakan software ini,
+tapi tetap jangan malas belajar
