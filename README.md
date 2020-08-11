@@ -3,9 +3,12 @@
  Untuk Komplain lebih lanjut
  Me : https://bit.ly/RahmatK
 
-## Install
+## Instalasi Singkat
 
 ```
+$ pkg install git
+$ pkg install php
+
 $ git clone https://github.com/aku-afk/php_convert_decimal-binner-octal-hex.git
 
 $ cd php_convert_decimal-binner-octal-hex
