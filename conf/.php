@@ -5,4 +5,4 @@ print("\n");
 print("###################### \n");
 print("\n");
 include 'algo_r.php';
-print("\n");
+
