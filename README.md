@@ -26,8 +26,7 @@ $ php convert.php
 
 ##### V2
 ```
-$ cd php_convert_decimal-binner-octal-hex
-$ cd v2
+$ cd php_convert_decimal-binner-octal-hex/v2
 $ php convert.php
 ```
 
