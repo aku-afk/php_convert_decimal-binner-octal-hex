@@ -1,0 +1,118 @@
+<?php
+
+system('clear');
+
+function info($i)
+{
+	if ($i == 1) {
+		echo "---------------------------------------------------------- \n";
+		echo "  author     : mamat \n";
+		echo "  code_name  : project_gabut \n";
+	} else {
+		info(1);
+		echo "---------------------------------------------------------- \n";
+		echo "  usage      : php convert.php d 5 b \n";
+		echo "  info       : convert bilangan decimal (d) dengan \n";
+		echo "               nilai 5 ke bilangan binner (b) \n";
+		echo "---------------------------------------------------------- \n";
+	}
+}
+
+function np($np)
+{
+	switch ($np) {
+		case 'd':
+			$lh = 'decimal';
+			break;
+		case 'b':
+			$lh = 'binary';
+			break;
+		case 'o':
+			$lh = 'octal';
+			break;
+		case 'h':
+			$lh = 'hex';
+			break;
+		
+		default:
+			$lh = '[!] undefinied';
+			break;
+	}
+	return $lh;
+}
+
+if (empty($argv[1]) || empty($argv[2]) || empty($argv[3])) {
+	info(2);
+} else {
+	$oa = $argv[1];
+	$on = $argv[2];
+	$ob = $argv[3];
+	$ox = $oa.$ob;
+	$has[0] = null;
+
+	switch ($ox) {
+		// Decimal > lain
+		case 'db':
+			$has[1] = decbin($on);
+			break;
+		case 'do':
+			$has[1] = decoct($on);
+			break;
+		case 'dh':
+			$has[1] = dechex($on);
+			break;
+
+		// Binner > lain
+		case 'bd':
+			$has[1] = bindec($on);
+			break;
+		case 'bo':
+			$has[1] = decoct(bindec($on));
+			break;
+		case 'bh':
+			$has[1] = dechex(bindec($on));
+			break;
+
+		// Octal > lain
+		case 'od':
+			$has[1] = octdec($on);
+			break;
+		case 'ob':
+			$has[1] = decbin(octdec($on));
+			break;
+		case 'oh':
+			$has[1] = octdec(octdec($on));
+			break;
+
+		// Hex > lain
+		case 'hd':
+			$has[1] = hexdec($on);
+			break;
+		case 'hb':
+			$has[1] = decbin(hexdec($on));
+			break;
+		case 'ho':
+			$has[1] = decoct(hexdec($on));
+			break;
+
+		case (('dd') || ('bb') || ('oo') || ('hh')):
+			info(2);
+			$has[1] = '[!] error';
+			$has[0] = 'x';
+			break;
+	
+		default:
+			info();
+			break;
+	}
+
+	if ($has[0] !== 'x') {
+		info(1);
+		echo "---------------------------------------------------------- \n";
+		echo "  ".np($oa)." = ".$on."  ->  ".np($ob)." = ".$has[1]."\n";
+		echo "---------------------------------------------------------- \n";
+	}
+
+}
+
+?>
