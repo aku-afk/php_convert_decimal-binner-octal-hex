@@ -30,6 +30,10 @@ $ cd php_convert_decimal-binner-octal-hex/v2
 $ php convert.php
 ```
 
+##### V3
+Download v3 compact : [Download][comconv]
+[comconv]: https://raw.githubusercontent.com/aku-afk/php_convert_decimal-binner-octal-hex/master/v3/convert
+
 # Akhir
 Terimakasih telah menggunakan software ini,
 tapi tetap jangan malas belajar</br></br>
